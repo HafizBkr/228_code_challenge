@@ -50,7 +50,7 @@ exports.login = async (req, res) => {
             return res.status(400).send(generateErrorResponse(errorCodes.INVALID_PASSWORD, "Mot de passe incorrect."));
         }
         
-        const token = jwt.sign({ id: user._id, role: user.role }, config.secret, { expiresIn: '1h' });
+        const token = jwt.sign({ id: user._id, role: user.role }, config.secret, { expiresIn: '4h' });
         res.status(200).send({ token });
     } catch (error) {
         console.error(`Erreur de connexion: ${error.message}`);

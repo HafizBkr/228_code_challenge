@@ -11,7 +11,8 @@ const errorCodes = {
     GENERAL_ERROR: { code: 'GENERAL_ERROR', message: 'Erreur générale.' },
     TOKEN_MISSING: { code: 'TOKEN_MISSING', message: 'Token manquant.' },
     AUTH_ERROR: { code: 'AUTH_ERROR', message: 'Erreur d\'authentification.' },
-    ACCESS_DENIED: { code: 'ACCESS_DENIED', message: 'Accès refusé.' }
+    ACCESS_DENIED: { code: 'ACCESS_DENIED', message: 'Accès refusé.' },
+    REJECT_REQUEST_ERROR: {code: 'REQUESR_REJECT_ERROR', message:'Erreur de Refus.'}
 };
 
 const generateErrorResponse = (errorObject, additionalInfo = {}) => {
