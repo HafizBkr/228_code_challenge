@@ -73,7 +73,7 @@ exports.rejectRequest = async (req, res) => {
 
 exports.getPendingRequests = async (req, res) => {
     try {
-        const requests = await Request.find({ status: 'pending' }).populate('userId', 'username email');
+        const requests = await Request.find({ status: 'pending' }).populate('userId', 'username  email');
         res.status(200).send(requests);
     } catch (error) {
         res.status(500).send(generateErrorResponse(errorCodes.FETCH_REQUESTS_ERROR, error.message));

@@ -18,8 +18,8 @@ const authMiddleware = async (req, res, next) => {
     }
 };
 
-const checkRole = (role) => (req, res, next) => {
-    if (req.user.role !== role) {
+const checkRole = (roles) => (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
         return res.status(403).send(generateErrorResponse(errorCodes.ACCESS_DENIED));
     }
     next();

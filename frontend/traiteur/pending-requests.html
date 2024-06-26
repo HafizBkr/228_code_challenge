@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestion des Demandes</title>
+    <link rel="stylesheet" href="traiteur.css">
+</head>
+<body>
+
+    <header>
+        <h1>Demandes en Attente</h1>
+        <nav>
+            <ul>
+                <li id="username-display"></li>
+                <li id="logout"><a href="#">Déconnexion</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="loading-modal" id="loading-modal" style="display: none;">
+        <div class="modal-content">
+            <p id="loading-message"></p>
+        </div>
+    </div>
+    <ul id="request-list"></ul>
+
+    <script src="/auth.js"></script>
+    <script src="requests.js"></script>
+</body>
+</html>

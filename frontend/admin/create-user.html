@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer un nouvel utilisateur</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <header>
+        <h1>Administration - Créer un nouvel utilisateur</h1>
+        <nav>
+            <ul>
+
+                <li><a href="users.html">Utilisateurs</a></li>
+                <li><a href="../traiteur/pending-requests.html">Demande</a></li>
+                <li id="username-display"></li>
+                <li id="logout"><a href="#">Déconnexion</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Créer un nouvel utilisateur</h2>
+            <form id="create-user-form">
+                <label for="username">Nom d'utilisateur</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="role">Rôle</label>
+                <select id="role" name="role" required>
+                    <option value="utilisateur">Utilisateur</option>
+                    <option value="traiteur">Traiteur</option>
+                    <option value="admin">Admin</option>
+                </select>
+                
+                <button type="submit">Créer</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Votre Application</p>
+    </footer>
+
+   
+    <script src="/auth.js"></script>
+    <script src="register.js"></script>
+    <script>
+        // Ajoutez votre script JavaScript pour la gestion de la création d'utilisateur ici
+    </script>
+</body>
+</html>

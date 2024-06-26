@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Création de Demande</title>
+    <link rel="stylesheet" href="utilisateur.css">
+</head>
+<body>
+
+    <header>
+        <h1>Crée une demande Mr(e):</h1>
+        <nav>
+            <ul>
+                <li id="logout"><a href="#">Déconnexion</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <form id="request-form">
+        <label for="description">Description :</label><br>
+        <textarea id="description" name="description" rows="4" cols="50"></textarea><br><br>
+        <button type="submit">Créer Demande</button>
+    </form>
+
+    <script src="../auth.js"></script>
+    <script src="create_request.js"></script>
+</body>
+</html>

@@ -2,10 +2,12 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const cors = require('cors');
+const path = require('path');
 const userRoutes = require('./routes/user');
 const protectedRoutes = require('./routes/protected');
-const errorHandler = require('./Middleware/errorHandler');
 const requestRoutes = require('./routes/request');
+const errorHandler = require('./Middleware/errorHandler');
 
 dotenv.config();
 
@@ -17,12 +19,21 @@ mongoose.connect(process.env.MONGO_URI, {
     useUnifiedTopology: true
 });
 
+// Configuration CORS
+app.use(cors());
+
+// Middleware pour parser le corps des requêtes en JSON
 app.use(bodyParser.json());
 
+// Routes
 app.use('/users', userRoutes);
 app.use('/request', requestRoutes);
 app.use('/protected', protectedRoutes);
 
+// Servir les fichiers statiques depuis le dossier frontend
+app.use(express.static(path.join(__dirname, 'frontend')));
+
+// Gérer les erreurs
 app.use(errorHandler);
 
 const port = process.env.PORT || 3000;
