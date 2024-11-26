@@ -71,7 +71,7 @@ Gestion des Utilisateurs (Admin)
     DELETE /users/
     : Supprime un utilisateur spécifié par son ID (nécessite un rôle admin).
 
-Routes Demandes (/request)
+Routes Demandes (/request) 
 Création de Demande
 
     POST /request/create : Crée une nouvelle demande en spécifiant la description et d'autres détails nécessaires.
