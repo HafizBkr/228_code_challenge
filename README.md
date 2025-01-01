@@ -1,6 +1,6 @@
 # 228_code_challenge
 ├── Config
-│   ├── config.js         // Configuration générale de l'application
+│   ├── config.js         // Configuration générale de l'applications
 │   └── database.js       // Configuration de la base de données (si nécessaire)
 ├── controllers
 │   ├── requestcontroller.js   // Contrôleur pour les requêtes (exemple)
